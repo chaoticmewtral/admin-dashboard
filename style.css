@@ -21,9 +21,18 @@ header {
     display: grid;
     grid-template-columns: auto;
     padding: 10px 0 0 10px;
+    gap: 2em;
 }
 
+#logo-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
 
+.menu-item {
+    display: grid;
+    grid-template-columns: auto auto;
+}
 
 main {
     grid-area: main;
