@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid teal; */
+    border: 1px solid teal;
 }
 
 body {
@@ -19,12 +19,17 @@ header {
     grid-template-areas: 
         "search notification"
         "greeting buttons";
+        grid-template-columns: 5fr 3fr;
 }
 
 #search {
     grid-area: search;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 24px 1fr;
+}
+
+#search input {
+    border-radius: 10px;
 }
 
 #greeting {
