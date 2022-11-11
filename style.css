@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
 }
 
 body {
@@ -99,6 +99,25 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#announcements {
-    
+#news {
+    display: grid;
+    gap: 20px;
+}
+
+.announcements {
+    padding: 12px;
+}
+
+.trending {
+    display: grid;
+    gap: 10px;
+}
+
+.trending > div {
+    padding: 12px;
+}
+
+.trending > div > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
