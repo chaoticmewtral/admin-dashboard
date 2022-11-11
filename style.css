@@ -55,12 +55,17 @@ header {
 
 #logo-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
 }
 
 .menu-item {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
+}
+
+.menu-item svg {
+    width: 24px;
+    height: 24px;
 }
 
 main {
