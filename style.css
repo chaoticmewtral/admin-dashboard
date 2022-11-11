@@ -67,8 +67,38 @@ main {
     grid-area: main;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 10px 15px;
 }
 
 #projects {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "project-name ."
+        "project-desc project-desc"
+        ". action-icons"
+}
+
+.card .title {
+    grid-area: project-name;
+}
+
+.card .description {
+    grid-area: project-desc;
+}
+
+.card .icons {
+    grid-area: action-icons;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#announcements {
+    
 }
