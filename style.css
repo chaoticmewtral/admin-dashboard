@@ -75,6 +75,8 @@ header {
     grid-template-columns: auto;
     padding: 10px 0 0 10px;
     gap: 2em;
+    background-color: var(--main-color);
+    color: var(--white);
 }
 
 #logo-container {
