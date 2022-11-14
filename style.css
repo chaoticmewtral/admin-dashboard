@@ -30,18 +30,25 @@ header {
     grid-template-areas: 
         "search notification"
         "greeting buttons";
-        grid-template-columns: 5fr 3fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 30px 1fr;
+    padding: 18px 27px;
+    gap: 25px;
 }
 
 #search {
     grid-area: search;
     display: grid;
     grid-template-columns: 24px 1fr;
+    gap: 10px;
 }
 
 #search input {
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: var(--light-bg);
+    border: transparent;
+    background-color: var(--light);
+    height: 90%;
 }
 
 #greeting {
