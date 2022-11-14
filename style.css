@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid teal; */
+    font-family: Roboto, sans-serif;
 }
 
 body {
@@ -54,19 +54,59 @@ header {
 #greeting {
     grid-area: greeting;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    gap: 10px;
+}
+
+#greeting img {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#greeting div p:nth-child(1) {
+    font-size: .8em;
+    font-weight: 800;
+}
+
+#greeting div p:nth-child(2) {
+    font-size: 1.3em;
+    font-weight: 900;
 }
 
 #notification {
     grid-area: notification;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    gap: 20px;
+    font-weight: 900;
+}
+
+#notification svg {
+    width: 24px;
+    height: 24px;
+    justify-self: right;
+    margin-right: 5px;
+}
+
+#notification img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
 }
 
 #buttons {
     grid-area: buttons;
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    border-radius: 20px;
+    border: transparent;
+    
 }
 
 #sidebar {
