@@ -1,12 +1,12 @@
 :root {
     /* main, search bg */
-    --light: rgba(224, 228, 237, 1);
+    --light: #d3dccd;
     /* sidebar, button text | header, cards bg */
     --white: rgba(255, 255, 255, 1);
     /* sidebar, button bg */
-    --main-color: rgba(25, 126, 201, 1);
+    --main-color: #027376;
     /* card border-left */
-    --accent-color: rgba(235, 166, 32, 1);
+    --accent-color: #d8b424;
     /* card text */
     --medium: rgb(127, 127, 127);
 }
