@@ -1,6 +1,12 @@
 :root {
-    --light-bg: rgb(224, 228, 237);
-    --white: rgb(255, 255, 255);
+    /* main, search bg */
+    --light: rgba(224, 228, 237, 1);
+    /* sidebar, button text | header, cards bg */
+    --white: rgba(255, 255, 255, 1);
+    /* sidebar, button bg */
+    --main-color: rgba(25, 126, 201, 1);
+    /* card border-left */
+    --accent-color: rgba(235, 166, 32, 1);
 }
 
 * {
@@ -84,7 +90,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 10px 15px;
-    background-color: var(--light-bg);
+    background-color: var(--light);
 }
 
 #projects {
@@ -100,9 +106,9 @@ main {
         "project-name ."
         "project-desc project-desc"
         ". action-icons";
-    border-left: 6px solid teal;
+    border-left: 6px solid var(--accent-color);
     margin: 10px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 15px;
     padding: 5px;
     height: 200px;
@@ -125,6 +131,12 @@ main {
 #news {
     display: grid;
     gap: 20px;
+}
+
+.announcements,
+.trending {
+    background-color: var(--white);
+    border-radius: 15px;
 }
 
 .announcements {
