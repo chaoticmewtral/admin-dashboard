@@ -7,13 +7,15 @@
     --main-color: rgba(25, 126, 201, 1);
     /* card border-left */
     --accent-color: rgba(235, 166, 32, 1);
+    /* card text */
+    --medium: rgb(127, 127, 127);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -118,34 +120,43 @@ button {
     grid-area: sidebar;
     display: grid;
     grid-template-columns: auto;
-    margin: 0 auto;
+    margin: 0;
     padding: 15px;
     gap: 2em;
     background-color: var(--main-color);
     color: var(--white);
     font-size: 1.2em;
     letter-spacing: .025em;
+    grid-template-rows: max-content max-content max-content;
 }
 
 #logo-container {
     display: grid;
     grid-template-columns: auto auto;
+    align-items: center;
+    font-size: 1.4em;
 }
 
-#logo-container svg {
-    width: 39px;
-    height: 39px;
-    viewBox="0 0 39 39";
+#main-menu {
+    display: grid;
+    gap: .8em;
+    justify-content: center;
+}
+
+#menu-space {
+    height: 1.8em;
 }
 
 .menu-item {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    align-items: center;
 }
 
 .menu-item svg {
     width: 24px;
     height: 24px;
+    justify-self: center;
 }
 
 main {
@@ -160,7 +171,7 @@ main {
 #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    gap: 20px;
 }
 
 .card {
@@ -171,19 +182,24 @@ main {
         "project-desc project-desc"
         ". action-icons";
     border-left: 6px solid var(--accent-color);
-    margin: 10px;
     background-color: var(--white);
     border-radius: 15px;
-    padding: 5px;
+    padding: 20px 10px;
     height: 200px;
+    grid-template-rows: max-content auto 24px;
+    gap: 5px;
 }
 
 .card .title {
     grid-area: project-name;
+    font-weight: bolder;
 }
 
 .card .description {
     grid-area: project-desc;
+    color: var(--medium);
+    font-size: .9em;
+    font-weight: 200;
 }
 
 .card .icons {
@@ -198,18 +214,47 @@ main {
 }
 
 .announcements,
+.trending,
+.card {
+    box-shadow: 1px 1px 5px var(--medium);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--light);
+}
+
+.announcements,
 .trending {
     background-color: var(--white);
     border-radius: 15px;
+    display: grid;
 }
 
 .announcements {
-    padding: 12px;
+    padding: 25px 20px 20px;
+}
+
+.announcements div p:first-child {
+    font-weight: 900;
+    font-size: .79em;
+    padding-bottom: .2em;
+}
+
+.announcements div p:last-child {
+    color: var(--medium);
+    font-size: .77em;
 }
 
 .trending {
     display: grid;
     gap: 10px;
+}
+
+.trending img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .trending > div {
