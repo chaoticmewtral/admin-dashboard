@@ -24,6 +24,7 @@ body {
         "sidebar header"
         "sidebar main";
     grid-template-columns: 20% 80%;
+    min-height: 98vh;
 }
 
 header {
@@ -139,7 +140,7 @@ button {
 
 #main-menu {
     display: grid;
-    gap: .8em;
+    gap: .9em;
     justify-content: center;
 }
 
@@ -241,6 +242,10 @@ hr {
     padding-bottom: .2em;
 }
 
+#trending-header {
+    align-self: end;
+}
+
 .announcements div p:last-child {
     color: var(--medium);
     font-size: .77em;
@@ -249,6 +254,7 @@ hr {
 .trending {
     display: grid;
     gap: 10px;
+    padding: 20px;
 }
 
 .trending img {
@@ -258,10 +264,23 @@ hr {
 }
 
 .trending > div {
-    padding: 12px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-content: center;
+    gap: 15px;
 }
 
-.trending > div > div {
+.user-assigned {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    align-content: center;
+    gap: 2px;
+}
+
+.handle {
+    font-size: .9em;
+}
+
+.user-assigned .project {
+    font-size: .79em;
+    color: var(--medium);
 }
